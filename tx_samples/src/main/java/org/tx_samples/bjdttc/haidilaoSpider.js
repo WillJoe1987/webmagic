@@ -37,7 +37,7 @@ function fetchShops (){
 			console.log(city+'|'+title+'|'+time+'|'+addr+'|'+tel)
 		}
 	}else{
-		console.log(city+' has none')
+		//console.log(city+' has none')
 	}
 	index ++;
 	findACity()
