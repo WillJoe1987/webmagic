@@ -27,8 +27,9 @@ public class App
 	//MAIGOO
 	static String cataUrl = "https://www.maigoo.com/ajaxstream/category/?action=searchblowcategory&catid=7&block=brand";
 	//www.chinapp.com
-	static String pinpai = "https://www.chinapp.com/pinpai/canyin-0-0-";
-	static String catagory = "餐饮行业";
+	static String pinpai = "https://www.chinapp.com/pinpai/muyingyongpinlei-0-0-";
+	static String catagory = "母婴用品";
+	static int totalPage = 174		;
 	
     public static void main( String[] args ) throws Exception
     {
@@ -45,8 +46,8 @@ public class App
 		}
     	int index = 1;
     	
-    	for(int i=1;i<159;i++) {
-    		
+    	for(int i=1;i<=totalPage;i++) {
+    		System.out.print("【page】："+pinpai+i);
     		HttpGet hg = new HttpGet(pinpai+i);
     		res = hc.execute(hg);
     		HttpEntity he = res.getEntity();
